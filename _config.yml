@@ -1,100 +1,86 @@
-# Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# This file contains configuration flags to customize your site
+#
 
-# Site settings
-react:
-  title: Material Bliss
-  name: Andrew Plaza
-  menu_right_subtitle: Blogger || Computer Scientist
-  avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
-  logo: static/img/logo_theme.jpg
-  email: aplaza@liquidthink.net
-  description: > # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
-  baseurl: "" # the subpath of your site, e.g. /blog
-  url: "http://test_domain.com:4000" # the base hostname & protocol for your site
-  permalink: /posts/:title
-  social:
-    twitter: http://twitter.com/liquid_think
-    github: http://github.com/InsidiousMind
-    facebook: http://facebook.com/liquidthinknet
-    code: http://livecoding.tv/insidious #livecoding.tv handle
-    google-plus: http://plus.google.com/+LiquidthinkNet #make sure to include the '+'
-    rss: feed.xml
+# Name of your site (displayed in the header)
+name: Angelina Blyth
 
+# Short bio or description (displayed in the header)
+description: Trainee Web Developer from Glasgow Scotland
 
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: https://avatars1.githubusercontent.com/u/20421294?s=400&u=f3983372382e838d01143f4006db251bd3789155&v=4
 
-title: Material Bliss
-name: Andrew Plaza
-menu_right_subtitle: Blogger || Computer Scientist
-avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
-logo: static/img/logo.png
-email: aplaza@liquidthink.net
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://test_domain.com:4000" # the base hostname & protocol for your site
-permalink: /posts/:title
+#
+# Flags below are optional
+#
 
-twitter_username: liquid_think
-github_username: InsidiousMind
+# Includes an icon in the footer for each username you enter
+footer-links:
+  dribbble:
+  email: angelinalblyth@hotmail.com
+  facebook:
+  flickr:
+  github: angelinalblyth/angelinalblyth.github.io
+  instagram: angelinalblyth
+  linkedin:
+  pinterest:
+  rss: # just type anything here for a working RSS icon
+  twitter: angelinalblyth1
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  youtube: # channel/<your_long_string> or user/<user-name>
+  googleplus: # anything in your profile username that comes after plus.google.com/
 
 
-# Build settings
-markdown: kramdown
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus:
 
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics:
+
+# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
+# Used for Sitemap.xml and your RSS feed
+url:
+
+# If you're hosting your site at a Project repository on GitHub pages
+# (http://yourusername.github.io/repository-name)
+# and NOT your User repository (http://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+baseurl: ""
+
+#
+# !! You don't need to change any of the configuration flags below !!
+#
+
+permalink: /:title/
+
+# The release of Jekyll Now that you're using
+version: v1.2.0
+
+# Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
 
-source: src
-destination: public
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
 
-assets:
-  compress:
-    css: sass
-    js: false
-
-  autowrite: true
-  cache: .asset-cache
-  cache_type: filesystem
-  cdn: www.example.com
-  skip_baseurl_with_cdn: false
-  skip_prefix_with_cdn: false
-  prefix: "/assets"
-  digest: true
-
-  assets:
-    - "*.png"
-    - "bundle.css"
-    - "bundle.js.map"
-    - "*.svg"
-    - "*.eof"
-    - "*.ttf"
-
-  sources:
-    - src/_assets/css
-    - src/_assets/fonts
-    - src/_assets/img
-    - src/_assets/projects
-
-  features:
-    liquid: false
-    integrity: true
-    automatic_img_size: true
-    automatic_img_alt : true
-
-exclude: ['node_modules', 'Gemfile', '.asset-cache', 'build-prod.sh', 'build-dev.sh']
-
+# Use the following plug-ins
 gems:
-  - jekyll-assets
-  - jekyll_pages_api
-  - jekyll-react
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
